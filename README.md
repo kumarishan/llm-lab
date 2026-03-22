@@ -36,7 +36,7 @@ The material here was generated with the [**repo-tutorial** skill](https://githu
 
 ---
 
-## [nanochat](https://github.com/karpathy/nanochat) — full LLM stack
+## [nanochat](https://github.com/karpathy/nanochat) — full LLM stack _(Review in progress)_
 
 A path from **BPE and architecture** through **distributed pretraining**, **SFT**, **RL (GRPO)**, **evaluation**, **fast inference**, and a **streaming chat** server.
 

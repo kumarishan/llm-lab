@@ -62,7 +62,7 @@ Don't just read — do the hands-on steps. The goal is to have real intuition fo
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # Clone and install (CPU)
-git clone https://github.com/your-org/nanochat
+git clone https://github.com/karpathy/nanochat
 cd nanochat
 uv sync --extra cpu
 

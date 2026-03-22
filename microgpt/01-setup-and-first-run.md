@@ -28,6 +28,7 @@
 - Python 3.8 or later installed and available on your `PATH`
 - An internet connection for the first run (the script downloads the dataset automatically; subsequent runs use the cached file)
 - No third-party packages required — the file uses only `os`, `math`, `random`, and `urllib.request` from the standard library
+- A copy of **`microgpt.py`**.
 
 ---
 
@@ -49,31 +50,36 @@ You do not need to understand any of this deeply yet — each stage gets its own
 
 ---
 
-## Step 1: Clone or locate the repository
+## Step 1: Download `microgpt.py` from the official source
 
-If you are reading this inside the repo, you already have the file. Confirm it is where you expect it:
+This tutorial assumes you follow along with Karpathy’s **`microgpt.py`**. The file is **not committed in this repository**, so download it from the upstream links below and save it locally in the root folder.
+
+**Where to get it**
+
+- **Write-up and context:** [microgpt — Karpathy’s blog](https://karpathy.github.io/2026/02/12/microgpt/)
+- **Canonical script (gist):** [microgpt.py on GitHub Gist](https://gist.github.com/karpathy/8627fe009c40f57531cb18360106ce95)
+
+**Option A — `curl`**
+
+From the root of your **llm-lab** clone:
 
 ```bash
-ls llm-lab/microgpt.py
-```
-
-Expected output:
-
-```
-llm-lab/microgpt.py
+curl -fsSL -o microgpt.py 'https://gist.githubusercontent.com/karpathy/8627fe009c40f57531cb18360106ce95/raw/microgpt.py'
 ```
 
 ---
 
 ## Step 2: Run the script
 
-From the root of the repository, run:
+From the root of the repository:
 
 ```bash
 python microgpt.py
 ```
 
-> If your system defaults to Python 2, use `python3 microgpt.py`.
+If you saved elsewhere, `cd` into that directory and run `python microgpt.py` there instead.
+
+> If your system defaults to Python 2, use `python3 microgpt.py` (or `python3 microgpt.py` from inside the folder that contains the file).
 
 The script will:
 
@@ -96,7 +102,7 @@ vocab size: 28
 num params: 21532
 ```
 
-Each line corresponds to a specific section of the source file. [view source: microgpt.py](../microgpt.py)
+Each line corresponds to a specific section of the source file. [View source: microgpt.py (gist)](https://gist.github.com/karpathy/8627fe009c40f57531cb18360106ce95)
 
 ### `num docs: 32033`
 
@@ -223,7 +229,7 @@ curl -o input.txt https://raw.githubusercontent.com/karpathy/makemore/988aa59/na
 ```
 
 **I see `ModuleNotFoundError`.**
-Make sure you are running with Python 3, not Python 2: `python3 microgpt.py`.
+Make sure you are running with Python 3, not Python 2: `python3 microgpt.py` (adjust the path if you saved the file somewhere else).
 
 **Training seems frozen.**
 It is not frozen — the `\r` at the end of the print statement overwrites the line in place. If your terminal does not support carriage returns the line may appear to not update, but training is still running.

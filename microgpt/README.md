@@ -37,8 +37,15 @@ By the end you will have read, traced, and experimented with every line of a wor
 
 ## Quick Start
 
+The script is **not vendored in this repo**. Download Karpathy’s canonical [`microgpt.py` from this gist](https://gist.github.com/karpathy/8627fe009c40f57531cb18360106ce95), or run:
+
 ```bash
-# No pip install needed — pure Python stdlib only
+curl -fsSL -o microgpt.py 'https://gist.githubusercontent.com/karpathy/8627fe009c40f57531cb18360106ce95/raw/microgpt.py'
+```
+
+Then (no `pip install` — pure Python stdlib only):
+
+```bash
 python microgpt.py
 ```
 
